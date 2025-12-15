@@ -3,7 +3,8 @@ Test suite for the Calculator class.
 """
 
 import pytest
-from calculator.calculator import Calculator, InvalidInputException
+from src.calculator.calculator import Calculator, InvalidInputException
+
 
 @pytest.fixture
 def calc():
@@ -706,7 +707,7 @@ class TestDivision:
         # Act & Assert
         with pytest.raises(ValueError):
             calc.divide(a, b)
-            
+
     def test_divide_edge_case_both_inputs_at_boundaries(self, calc):
         """Test dividing with both inputs at boundary values."""
         # Arrange
